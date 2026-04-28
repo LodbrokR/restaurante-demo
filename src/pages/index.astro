@@ -30,7 +30,7 @@ import Layout from '../layouts/Layout.astro';
 	</section>
 
 	<!-- Interactive Menu Display Section -->
-	<section class="py-24 bg-stone-950 border-t border-stone-900" id="menu-interactivo">
+	<section class="pt-24 pb-8 bg-stone-950 border-t border-stone-900" id="menu-interactivo">
 		<div class="max-w-7xl mx-auto px-6">
 			<div class="text-center mb-12">
 				<span class="text-rose-500 font-bold tracking-widest uppercase text-xs mb-3 block">Nuestra Variedad</span>
@@ -46,10 +46,10 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 
 			<!-- Content Containers -->
-			<div class="menu-content-container relative min-h-[450px]">
+			<div class="menu-content-container relative">
 				
 				<!-- Rolls Fríos -->
-				<div id="frios" class="menu-pane opacity-100 transition-all duration-500 absolute inset-0">
+				<div id="frios" class="menu-pane relative z-10 opacity-100 transition-all duration-500">
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 						<!-- Item 1 -->
 						<div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-stone-700 transition-all group">
@@ -59,7 +59,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="p-6">
 								<h3 class="font-['Noto_Serif'] text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Avocado Roll</h3>
-								<p class="text-sm text-stone-400 font-light mb-4">Salmón, queso crema y cebollín, envuelto en finas láminas de palta hass.</p>
+								<p class="text-sm text-stone-300 font-light mb-4 leading-relaxed">Salmón, queso crema y cebollín, envuelto en finas láminas de palta hass.</p>
 							</div>
 						</div>
 						<!-- Item 2 -->
@@ -70,7 +70,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="p-6">
 								<h3 class="font-['Noto_Serif'] text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Ceviche Roll</h3>
-								<p class="text-sm text-stone-400 font-light mb-4">Camarón panko y palta, cubierto con nuestro ceviche peruano de pesca del día y salsa acevichada.</p>
+								<p class="text-sm text-stone-300 font-light mb-4 leading-relaxed">Camarón panko y palta, cubierto con nuestro ceviche peruano de pesca del día y salsa acevichada.</p>
 							</div>
 						</div>
 						<!-- Item 3 -->
@@ -81,14 +81,14 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="p-6">
 								<h3 class="font-['Noto_Serif'] text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Acevichado Nikkei</h3>
-								<p class="text-sm text-stone-400 font-light mb-4">Atún, queso crema y palta, bañado en salsa acevichada nikkei y toques de shichimi togarashi.</p>
+								<p class="text-sm text-stone-300 font-light mb-4 leading-relaxed">Atún, queso crema y palta, bañado en salsa acevichada nikkei y toques de shichimi togarashi.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<!-- Rolls Calientes -->
-				<div id="calientes" class="menu-pane opacity-0 pointer-events-none transition-all duration-500 absolute inset-0 transform translate-y-4">
+				<div id="calientes" class="menu-pane absolute top-0 left-0 w-full z-0 opacity-0 pointer-events-none transition-all duration-500 transform translate-y-4">
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 						<!-- Item 1 -->
 						<div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-stone-700 transition-all group">
@@ -98,7 +98,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="p-6">
 								<h3 class="font-['Noto_Serif'] text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Ebi Tempura Roll</h3>
-								<p class="text-sm text-stone-400 font-light mb-4">Camarón, queso crema y cebollín, envuelto en masa tempura frita y salsa unagi (teriyaki).</p>
+								<p class="text-sm text-stone-300 font-light mb-4 leading-relaxed">Camarón, queso crema y cebollín, envuelto en masa tempura frita y salsa unagi (teriyaki).</p>
 							</div>
 						</div>
 						<!-- Item 2 -->
@@ -109,14 +109,14 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="p-6">
 								<h3 class="font-['Noto_Serif'] text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Tori Panko Roll</h3>
-								<p class="text-sm text-stone-400 font-light mb-4">Pollo teriyaki, queso crema y almendras tostadas, frito en panko crujiente.</p>
+								<p class="text-sm text-stone-300 font-light mb-4 leading-relaxed">Pollo teriyaki, queso crema y almendras tostadas, frito en panko crujiente.</p>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<!-- Promociones -->
-				<div id="promos" class="menu-pane opacity-0 pointer-events-none transition-all duration-500 absolute inset-0 transform translate-y-4">
+				<div id="promos" class="menu-pane absolute top-0 left-0 w-full z-0 opacity-0 pointer-events-none transition-all duration-500 transform translate-y-4">
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 						<div class="bg-stone-900 border border-stone-700 rounded-xl overflow-hidden shadow-xl transition-all group text-white hover:border-rose-500/50">
 							<div class="p-8">
@@ -126,7 +126,7 @@ import Layout from '../layouts/Layout.astro';
 										<h3 class="font-['Noto_Serif'] text-3xl font-bold text-white mb-2">Promo 40 Cortes</h3>
 									</div>
 									<div class="text-right">
-										<span class="block text-stone-500 line-through text-sm">$32.000</span>
+										<span class="block text-stone-400 line-through text-sm">$32.000</span>
 										<span class="block text-2xl font-bold text-rose-400">$24.990</span>
 									</div>
 								</div>
@@ -155,7 +155,7 @@ import Layout from '../layouts/Layout.astro';
 									<li class="flex items-center gap-2"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 20 Cortes Rolls Fríos Premium</li>
 									<li class="flex items-center gap-2"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 20 Cortes Rolls Calientes</li>
 									<li class="flex items-center gap-2"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 10 Cortes Sashimi Salmón</li>
-									<li class="flex items-center gap-2"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 10 Empanaditas o Gyozas</li>
+									<li class="flex items-center gap-2"><svg class="w-4 h-4 text-white" fill="none" viewBox="0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> 10 Empanaditas o Gyozas</li>
 								</ul>
 								<button class="w-full py-3 bg-stone-900 border border-stone-700 text-white rounded-lg font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-stone-900 transition-colors">Añadir al carrito</button>
 							</div>
@@ -164,7 +164,7 @@ import Layout from '../layouts/Layout.astro';
 				</div>
 
 				<!-- Bebestibles -->
-				<div id="bebestibles" class="menu-pane opacity-0 pointer-events-none transition-all duration-500 absolute inset-0 transform translate-y-4">
+				<div id="bebestibles" class="menu-pane absolute top-0 left-0 w-full z-0 opacity-0 pointer-events-none transition-all duration-500 transform translate-y-4">
 					<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 						<!-- Item 1 -->
 						<div class="bg-stone-900 border border-stone-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-stone-700 transition-all group">
@@ -174,7 +174,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="p-6">
 								<h3 class="font-['Noto_Serif'] text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Pisco Sour Catedral</h3>
-								<p class="text-sm text-stone-400 font-light mb-4">El clásico chileno/peruano, preparado con pisco doble destilado, limón sutil y amargo de angostura.</p>
+								<p class="text-sm text-stone-300 font-light mb-4 leading-relaxed">El clásico chileno/peruano, preparado con pisco doble destilado, limón sutil y amargo de angostura.</p>
 							</div>
 						</div>
 						<!-- Item 2 -->
@@ -185,7 +185,7 @@ import Layout from '../layouts/Layout.astro';
 							</div>
 							<div class="p-6">
 								<h3 class="font-['Noto_Serif'] text-xl font-bold text-white mb-2 group-hover:text-rose-400 transition-colors">Ramazzotti Spritz</h3>
-								<p class="text-sm text-stone-400 font-light mb-4">Refrescante mix de Ramazzotti Rosato, espumante brut, agua con gas y berries.</p>
+								<p class="text-sm text-stone-300 font-light mb-4 leading-relaxed">Refrescante mix de Ramazzotti Rosato, espumante brut, agua con gas y berries.</p>
 							</div>
 						</div>
 					</div>
@@ -211,15 +211,15 @@ import Layout from '../layouts/Layout.astro';
 					tab.classList.remove('text-stone-400', 'hover:text-white', 'hover:bg-stone-800');
 
 					panes.forEach(pane => {
-						pane.classList.remove('opacity-100', 'translate-y-0');
-						pane.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+						pane.classList.remove('opacity-100', 'translate-y-0', 'relative', 'z-10');
+						pane.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4', 'absolute', 'top-0', 'left-0', 'w-full', 'z-0');
 					});
 
 					const targetId = tab.getAttribute('data-target');
 					const targetPane = document.getElementById(targetId);
 					if(targetPane) {
-						targetPane.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
-						targetPane.classList.add('opacity-100', 'translate-y-0');
+						targetPane.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4', 'absolute', 'top-0', 'left-0', 'w-full', 'z-0');
+						targetPane.classList.add('opacity-100', 'translate-y-0', 'relative', 'z-10');
 					}
 				});
 			});
@@ -227,8 +227,9 @@ import Layout from '../layouts/Layout.astro';
 	</script>
 
 	<!-- Dynamic Bento Grid Section -->
-	<section class="py-32 max-w-7xl mx-auto px-6">
-		<div class="text-center mb-20">
+	<section class="pt-8 pb-24 bg-stone-50 relative">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="text-center mb-16">
 			<span class="text-rose-600 font-bold tracking-widest uppercase text-sm mb-2 block">Nuestra Carta</span>
 			<h2 class="text-4xl md:text-5xl font-['Noto_Serif'] font-bold text-stone-900">Pura Excelencia</h2>
 			<div class="w-12 h-0.5 bg-rose-500 mx-auto mt-6"></div>
@@ -266,7 +267,7 @@ import Layout from '../layouts/Layout.astro';
 				<div class="absolute inset-0 bg-gradient-to-t from-stone-950 to-transparent opacity-90"></div>
 				<div class="relative z-10">
 					<h3 class="text-2xl font-['Noto_Serif'] text-white mb-2 group-hover:text-rose-400 transition-colors duration-300">A5 Wagyu Nigiri</h3>
-					<p class="text-stone-400 font-light text-sm">Sellado al carbón binchotan, sal de mar ahumada.</p>
+					<p class="text-stone-300 font-light text-sm">Sellado al carbón binchotan, sal de mar ahumada.</p>
 				</div>
 			</div>
 
@@ -278,7 +279,7 @@ import Layout from '../layouts/Layout.astro';
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
 					</div>
 					<h3 class="text-stone-900 font-bold tracking-wide mb-2">Hospitalidad</h3>
-					<p class="text-stone-500 text-sm font-light">Atención impecable en cada detalle.</p>
+					<p class="text-stone-600 text-sm font-light">Atención impecable en cada detalle.</p>
 				</div>
 			</div>
 
