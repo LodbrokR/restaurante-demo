@@ -71,8 +71,6 @@ import Layout from '../layouts/Layout.astro';
                             Confirmar Reserva
                         </button>
                         <p id="formStatus" class="text-sm font-bold text-emerald-600 hidden text-center mt-4">¡Reserva solicitada! Te confirmaremos a la brevedad.</p>
-                        <input type="hidden" name="_subject" value="Nueva reserva en Kumo Sushi">
-                        <input type="hidden" name="_captcha" value="false">
                     </div>
                 </form>
             </div>
@@ -95,11 +93,8 @@ import Layout from '../layouts/Layout.astro';
 
 			try {
 				const formData = new FormData(form);
-				const res = await fetch('https://formsubmit.co/ajax/lmedina.web@gmail.com', {
+				const res = await fetch('/api/send-email', {
 					method: 'POST',
-					headers: {
-						'Accept': 'application/json'
-					},
 					body: formData
 				});
 
