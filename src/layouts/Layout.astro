@@ -1,4 +1,4 @@
----
+﻿---
 import '../styles/global.css';
 
 interface Props {
@@ -20,34 +20,34 @@ const { title } = Astro.props;
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 		<title>{title} | Fuego & Origen</title>
 	</head>
-	<body class="font-['Outfit'] bg-zinc-950 text-zinc-300 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
-		<header class="fixed w-full top-0 z-40 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800/50 transition-all">
+	<body class="font-['Outfit'] bg-stone-50 text-stone-600 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
+		<header class="fixed w-full top-0 z-40 bg-stone-50/90 backdrop-blur-md border-b border-stone-200 transition-all">
 			<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 				<a href="/" class="flex items-center gap-2 group">
-					<span class="font-extrabold text-2xl tracking-tighter text-white uppercase">Fuego<span class="text-brand-500">&</span>Origen</span>
+					<span class="font-extrabold text-2xl tracking-tighter text-stone-900 uppercase">Fuego<span class="text-brand-500">&</span>Origen</span>
 				</a>
 				<nav class="hidden md:flex items-center gap-8">
-					<ul class="flex items-center gap-6 text-sm font-medium text-zinc-400">
-						<li><a href="/" class="hover:text-white transition-colors">Inicio</a></li>
-						<li><a href="/menu" class="hover:text-white transition-colors">Menú</a></li>
-						<li><a href="/nosotros" class="hover:text-white transition-colors">Origen</a></li>
+					<ul class="flex items-center gap-6 text-sm font-medium text-stone-500">
+						<li><a href="/" class="hover:text-stone-900 transition-colors">Inicio</a></li>
+						<li><a href="/menu" class="hover:text-stone-900 transition-colors">Menú</a></li>
+						<li><a href="/nosotros" class="hover:text-stone-900 transition-colors">Origen</a></li>
 					</ul>
-					<a href="/reservas" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-none border border-brand-500 font-medium transition-all hover:shadow-[0_0_20px_rgba(193,117,96,0.3)]">Reservar Mesa</a>
+					<a href="/reservas" class="bg-brand-600 hover:bg-brand-500 text-white px-6 py-2.5 rounded-none border border-brand-500 font-medium transition-all shadow-md">Reservar Mesa</a>
 				</nav>
 			</div>
 		</header>
 		<main class="flex-grow pt-20">
 			<slot />
 		</main>
-		<footer class="bg-zinc-950 border-t border-zinc-900 pt-16 pb-8 text-center mt-auto">
+		<footer class="bg-stone-100 border-t border-stone-200 pt-16 pb-8 text-center mt-auto">
 			<div class="mb-8">
-				<span class="font-extrabold text-3xl tracking-tighter text-zinc-800 uppercase">Fuego<span class="text-zinc-800">&</span>Origen</span>
+				<span class="font-extrabold text-3xl tracking-tighter text-stone-400 uppercase">Fuego<span class="text-brand-500">&</span>Origen</span>
 			</div>
-			<div class="text-sm text-zinc-500 mb-8 space-y-2">
+			<div class="text-sm text-stone-500 mb-8 space-y-2">
 				<p>Av. Alonso de Córdova 4567, Vitacura, Santiago</p>
 				<p>Martes a Sábado: 19:00 - 23:30 | Domingo: 13:00 - 16:00</p>
 			</div>
-			<p class="text-xs text-zinc-700">&copy; 2026 Fuego & Origen. Todos los derechos reservados.</p>
+			<p class="text-xs text-stone-400">&copy; 2026 Fuego & Origen. Todos los derechos reservados.</p>
 		</footer>
 	</body>
 </html>
