@@ -9,16 +9,16 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.formData();
     
-    let htmlContent = <h2>Nuevo mensaje desde la web</h2><table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 600px;">;
+    let htmlContent = "<h2>Nuevo mensaje desde la web</h2><table border='1' cellpadding='5' cellspacing='0' style='border-collapse: collapse; width: 100%; max-width: 600px;'>";
     for (const [key, value] of data.entries()) {
-        htmlContent += <tr><td style="padding: 8px; background: #f3f4f6; text-transform: capitalize;"><strong> + key + </strong></td><td style="padding: 8px;"> + value + </td></tr>;
+        htmlContent += "<tr><td style='padding: 8px; background: #f3f4f6; text-transform: capitalize;'><strong>" + key + "</strong></td><td style='padding: 8px;'>" + value + "</td></tr>";
     }
-    htmlContent += </table>;
+    htmlContent += "</table>";
 
     const sendRes = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
-      to: 'lmedina.web@gmail.com', // CAMBIAR POR EL CORREO REGISTRADO EN RESEND
-      subject: Nuevo formulario recibido,
+      to: 'lmedina.web@gmail.com',
+      subject: 'Nuevo formulario recibido',
       html: htmlContent,
     });
 
@@ -31,4 +31,3 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500 });
   }
 };
-
