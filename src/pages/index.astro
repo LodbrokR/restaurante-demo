@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -26,6 +26,93 @@ import Layout from '../layouts/Layout.astro';
 				<span>Comenzar el Viaje</span>
 				<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
 			</a>
+		</div>
+	</section>
+
+	<!-- Menu Display Section -->
+	<section class="py-24 bg-stone-100/50 border-t border-stone-200/50">
+		<div class="max-w-7xl mx-auto px-6">
+			<div class="text-center mb-16">
+				<span class="text-rose-600 font-bold tracking-widest uppercase text-xs mb-3 block">Selección Kumo</span>
+				<h2 class="text-3xl md:text-4xl font-['Noto_Serif'] font-bold text-stone-900">Especialidades</h2>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-16 max-w-5xl mx-auto">
+				<!-- Categoría 1 -->
+				<div>
+					<h3 class="text-xl font-['Noto_Serif'] border-b border-stone-300 pb-4 mb-8 text-stone-800 flex items-center justify-between">
+						<span>Nigiri & Sashimi</span>
+						<span class="text-xs font-sans text-stone-400 uppercase tracking-widest font-light">Por pieza / Cortes</span>
+					</h3>
+					<div class="space-y-8">
+						<div class="group cursor-pointer">
+							<div class="flex justify-between items-baseline mb-1">
+								<h4 class="font-bold text-stone-900 group-hover:text-rose-600 transition-colors">Otoro Premium</h4>
+								<span class="flex-grow border-b border-dotted border-stone-300 mx-4 opacity-50"></span>
+								<span class="font-medium text-stone-900">$12.000</span>
+							</div>
+							<p class="text-sm text-stone-500 font-light">Ventresca de atún aleta azul, trufa negra, sal en escamas.</p>
+						</div>
+						<div class="group cursor-pointer">
+							<div class="flex justify-between items-baseline mb-1">
+								<h4 class="font-bold text-stone-900 group-hover:text-rose-600 transition-colors">Wagyu A5 Flameado</h4>
+								<span class="flex-grow border-b border-dotted border-stone-300 mx-4 opacity-50"></span>
+								<span class="font-medium text-stone-900">$14.500</span>
+							</div>
+							<p class="text-sm text-stone-500 font-light">Lámina de wagyu japonés sellado al soplete, ponzu trufado.</p>
+						</div>
+						<div class="group cursor-pointer">
+							<div class="flex justify-between items-baseline mb-1">
+								<h4 class="font-bold text-stone-900 group-hover:text-rose-600 transition-colors">Hotate (Ostión)</h4>
+								<span class="flex-grow border-b border-dotted border-stone-300 mx-4 opacity-50"></span>
+								<span class="font-medium text-stone-900">$8.500</span>
+							</div>
+							<p class="text-sm text-stone-500 font-light">Ostión fresco, yuzu kosho, gota de limón de pica.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Categoría 2 -->
+				<div>
+					<h3 class="text-xl font-['Noto_Serif'] border-b border-stone-300 pb-4 mb-8 text-stone-800 flex items-center justify-between">
+						<span>Signature Rolls</span>
+						<span class="text-xs font-sans text-stone-400 uppercase tracking-widest font-light">8 Cortes</span>
+					</h3>
+					<div class="space-y-8">
+						<div class="group cursor-pointer">
+							<div class="flex justify-between items-baseline mb-1">
+								<h4 class="font-bold text-stone-900 group-hover:text-rose-600 transition-colors">Volcano Kumo</h4>
+								<span class="flex-grow border-b border-dotted border-stone-300 mx-4 opacity-50"></span>
+								<span class="font-medium text-stone-900">$18.900</span>
+							</div>
+							<p class="text-sm text-stone-500 font-light">Camarón furai, palta, cubierto de tartar de salmón picante y tenkasu.</p>
+						</div>
+						<div class="group cursor-pointer">
+							<div class="flex justify-between items-baseline mb-1">
+								<h4 class="font-bold text-stone-900 group-hover:text-rose-600 transition-colors">Truffle Ebi</h4>
+								<span class="flex-grow border-b border-dotted border-stone-300 mx-4 opacity-50"></span>
+								<span class="font-medium text-stone-900">$17.500</span>
+							</div>
+							<p class="text-sm text-stone-500 font-light">Camarón panko, queso crema, envuelto en palta, mayo trufada y masago.</p>
+						</div>
+						<div class="group cursor-pointer">
+							<div class="flex justify-between items-baseline mb-1">
+								<h4 class="font-bold text-stone-900 group-hover:text-rose-600 transition-colors">Maguro Tataki</h4>
+								<span class="flex-grow border-b border-dotted border-stone-300 mx-4 opacity-50"></span>
+								<span class="font-medium text-stone-900">$19.200</span>
+							</div>
+							<p class="text-sm text-stone-500 font-light">Atún spicy, pepino, envuelto en atún sellado, salsa tataki y negi.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="text-center mt-16">
+				<a href="/menu" class="inline-flex items-center gap-2 text-stone-900 font-bold uppercase tracking-widest text-sm hover:text-rose-600 transition-colors group">
+					Ver Carta Completa
+					<span class="block w-8 h-[1px] bg-stone-900 group-hover:bg-rose-600 group-hover:w-12 transition-all duration-300 ml-2"></span>
+				</a>
+			</div>
 		</div>
 	</section>
 
