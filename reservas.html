@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reservations - KAISEKI CHILE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Serif:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#393939",
+                        "primary": "#ffb6aa",
+                        "on-background": "#e5e2e1",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "on-primary": "#60140b",
+                        "secondary": "#e9c176",
+                        "tertiary-fixed-dim": "#b9ce96",
+                        "on-secondary-fixed": "#261900",
+                        "secondary-fixed-dim": "#e9c176",
+                        "tertiary": "#bad097",
+                        "on-tertiary-fixed-variant": "#3b4c21",
+                        "surface-variant": "#353534",
+                        "on-primary-container": "#762419",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "error-container": "#93000a",
+                        "on-secondary": "#412d00",
+                        "on-tertiary-fixed": "#121f00",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "secondary-container": "#604403",
+                        "inverse-primary": "#9e4134",
+                        "secondary-fixed": "#ffdea5",
+                        "primary-container": "#ff8c7a",
+                        "outline-variant": "#56423f",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#25350c",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-container": "#9fb47e",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#410100",
+                        "on-primary-fixed-variant": "#7e2a1f",
+                        "surface-container-highest": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed": "#d5eab0",
+                        "surface-tint": "#ffb4a8",
+                        "outline": "#a48b87",
+                        "on-surface-variant": "#dcc0bc",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffdad4",
+                        "on-secondary-container": "#dab36a",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-container": "#35461b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Noto Serif"],
+                        "display-xl": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+        }
+        .bg-surface-stone {
+            background-color: #242424;
+        }
+        .glass-panel {
+            background: rgba(36, 36, 36, 0.7);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+        }
+        .border-gold {
+            border-color: #e9c176;
+        }
+        .input-minimal {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #56423f;
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            color: #e5e2e1;
+        }
+        .input-minimal:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #e9c176;
+        }
+        .smooth-transition {
+            transition: all 300ms ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-stone-950/80 backdrop-blur-3xl font-serif tracking-tight fixed top-0 w-full z-50 border-b border-stone-800">
+<div class="flex justify-between items-center px-8 md:px-16 py-6 w-full">
+<div class="text-2xl font-serif font-light tracking-[0.2em] text-amber-200">
+                KAISEKI CHILE
+            </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-stone-400 font-medium hover:text-amber-100 transition-colors duration-300 ease-in-out" href="#">Home</a>
+<a class="text-stone-400 font-medium hover:text-amber-100 transition-colors duration-300 ease-in-out" href="#">Menu</a>
+<a class="text-amber-200 border-b border-amber-200 pb-1 hover:text-amber-100 transition-colors duration-300 ease-in-out" href="#">Reservations</a>
+<a class="text-stone-400 font-medium hover:text-amber-100 transition-colors duration-300 ease-in-out" href="#">Contact</a>
+</div>
+<div class="hidden md:block">
+<button class="bg-secondary text-on-secondary font-body-lg font-bold px-6 py-3 rounded DEFAULT smooth-transition hover:bg-secondary-fixed">
+                    Reserve Table
+                </button>
+</div>
+<div class="md:hidden text-amber-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[120px] pb-section-gap px-margin-mobile md:px-margin-desktop relative">
+<!-- Background Imagery overlay -->
+<div class="absolute inset-0 z-[-1] opacity-20" data-alt="dark moody overhead shot of elegant sushi arrangement on black slate stone surface with subtle rim lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDy-iA0QU7jrHWeQcg0lF6Hn3Ag-p_wLVVhNBwIWL0nk0Jecv25B34CFoUE7rZDJkLmk4RDLWTEgq-3kUsZ5ysn-Oybn0XR6-AzimpoEJjsO5GVWohii_gHiky4qLbP_5gHynJg-K5oAacqqunSMyH6YJlwJ27luskQcF9dfLxrFg4z85dD0dPwRkktibZhfdIHNrQoEOPoaXtkzjtdsghvE3H5yhcpzvqL6_mktarHrZ21LnObAYeq1xThBQQepj7xbhoFA0FR6EE'); background-size: cover; background-position: center;"></div>
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Omotenashi Context (Left Column) -->
+<div class="lg:col-span-5 flex flex-col gap-8 sticky top-[150px]">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-6">The Art of<br/><span class="text-secondary">Omotenashi</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[400px]">
+                        We invite you to experience hospitality without expectation. Every detail, from the ambient light to the cadence of service, is orchestrated to provide a sanctuary of culinary focus.
+                    </p>
+</div>
+<div class="h-[1px] w-16 bg-outline-variant my-4"></div>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" style="font-variation-settings: 'FILL' 0;">schedule</span>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase mb-1">Service Hours</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tuesday - Sunday<br/>18:30 — 23:00</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1" style="font-variation-settings: 'FILL' 0;">location_on</span>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase mb-1">Location</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Av. Nueva Costanera 3900<br/>Vitacura, Santiago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Form (Right Column) -->
+<div class="lg:col-span-7 mt-12 lg:mt-0">
+<div class="glass-panel border border-outline-variant rounded-xl p-8 md:p-12 relative overflow-hidden">
+<!-- Subtle inner glow effect -->
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-secondary opacity-10 rounded-full blur-[60px] pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-on-surface border-b border-outline-variant pb-6 mb-8">Reserve Your Journey</h2>
+<form class="space-y-8 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Date -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="date">Date</label>
+<div class="relative">
+<input class="w-full input-minimal font-body-lg text-body-lg pb-2 bg-transparent" id="date" required="" type="date"/>
+</div>
+</div>
+<!-- Guests -->
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="guests">Guests</label>
+<select class="w-full input-minimal font-body-lg text-body-lg pb-2 bg-transparent appearance-none" id="guests" required="">
+<option class="bg-surface-container" disabled="" selected="" value="">Select party size</option>
+<option class="bg-surface-container" value="1">1 Guest</option>
+<option class="bg-surface-container" value="2">2 Guests</option>
+<option class="bg-surface-container" value="3">3 Guests</option>
+<option class="bg-surface-container" value="4">4 Guests</option>
+<option class="bg-surface-container" value="5">5+ Guests (Private Dining)</option>
+</select>
+</div>
+</div>
+<!-- Time Slots (Bento-style selection) -->
+<div class="flex flex-col gap-4 pt-4">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Available Times</label>
+<div class="grid grid-cols-3 gap-4">
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="time" required="" type="radio" value="18:30"/>
+<div class="text-center py-4 border border-outline-variant rounded-lg font-body-md text-on-surface-variant peer-checked:bg-secondary/10 peer-checked:border-secondary peer-checked:text-secondary smooth-transition hover:border-secondary/50">
+                                        18:30
+                                    </div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="time" type="radio" value="19:00"/>
+<div class="text-center py-4 border border-outline-variant rounded-lg font-body-md text-on-surface-variant peer-checked:bg-secondary/10 peer-checked:border-secondary peer-checked:text-secondary smooth-transition hover:border-secondary/50">
+                                        19:00
+                                    </div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" disabled="" name="time" type="radio" value="19:30"/>
+<div class="text-center py-4 border border-surface-container-high bg-surface-container-low rounded-lg font-body-md text-outline opacity-50 cursor-not-allowed">
+                                        19:30 <span class="block text-[10px] mt-1">Full</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="time" type="radio" value="20:00"/>
+<div class="text-center py-4 border border-outline-variant rounded-lg font-body-md text-on-surface-variant peer-checked:bg-secondary/10 peer-checked:border-secondary peer-checked:text-secondary smooth-transition hover:border-secondary/50">
+                                        20:00
+                                    </div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="time" type="radio" value="20:30"/>
+<div class="text-center py-4 border border-outline-variant rounded-lg font-body-md text-on-surface-variant peer-checked:bg-secondary/10 peer-checked:border-secondary peer-checked:text-secondary smooth-transition hover:border-secondary/50">
+                                        20:30
+                                    </div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="time" type="radio" value="21:00"/>
+<div class="text-center py-4 border border-outline-variant rounded-lg font-body-md text-on-surface-variant peer-checked:bg-secondary/10 peer-checked:border-secondary peer-checked:text-secondary smooth-transition hover:border-secondary/50">
+                                        21:00
+                                    </div>
+</label>
+</div>
+</div>
+<!-- Personal Details -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="name">Full Name</label>
+<input class="w-full input-minimal font-body-lg text-body-lg pb-2 bg-transparent" id="name" placeholder="e.g. Akira Kurosawa" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="email">Email</label>
+<input class="w-full input-minimal font-body-lg text-body-lg pb-2 bg-transparent" id="email" placeholder="contact@domain.com" required="" type="email"/>
+</div>
+</div>
+<!-- Special Requests -->
+<div class="flex flex-col gap-2 pt-4">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase" for="requests">Dietary Requirements &amp; Notes</label>
+<textarea class="w-full input-minimal font-body-lg text-body-lg pb-2 bg-transparent resize-none" id="requests" placeholder="Please inform us of any allergies or special occasions..." rows="2"></textarea>
+</div>
+<!-- Submit Action -->
+<div class="pt-8 flex items-center justify-between border-t border-outline-variant">
+<p class="font-body-md text-[14px] text-on-surface-variant max-w-[250px]">A credit card is required to secure your reservation.</p>
+<button class="bg-secondary text-on-secondary font-body-lg font-bold px-8 py-4 rounded DEFAULT flex items-center gap-2 smooth-transition hover:bg-secondary-fixed" type="submit">
+                                Continue
+                                <span class="material-symbols-outlined text-on-secondary" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-950 font-serif text-sm tracking-wide w-full border-t border-stone-800">
+<div class="flex flex-col md:flex-row justify-between items-center px-16 py-12 gap-8 w-full">
+<div class="text-xl font-serif text-amber-200">
+                KAISEKI CHILE
+            </div>
+<div class="text-[#FF8C7A]">
+                © 2024 Kaiseki Chile. Crafted with Modern Omotenashi. Vitacura, Santiago.
+            </div>
+<div class="flex gap-6">
+<a class="text-stone-500 hover:text-amber-200 transition-all ease-in-out duration-300" href="#">Instagram</a>
+<a class="text-stone-500 hover:text-amber-200 transition-all ease-in-out duration-300" href="#">WhatsApp</a>
+<a class="text-stone-500 hover:text-amber-200 transition-all ease-in-out duration-300" href="#">Privacy</a>
+<a class="text-stone-500 hover:text-amber-200 transition-all ease-in-out duration-300" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

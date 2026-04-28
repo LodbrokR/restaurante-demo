@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact &amp; Location | Kaiseki Chile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Noto+Serif:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#393939",
+                        "primary": "#ffb6aa",
+                        "on-background": "#e5e2e1",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "on-primary": "#60140b",
+                        "secondary": "#e9c176",
+                        "tertiary-fixed-dim": "#b9ce96",
+                        "on-secondary-fixed": "#261900",
+                        "secondary-fixed-dim": "#e9c176",
+                        "tertiary": "#bad097",
+                        "on-tertiary-fixed-variant": "#3b4c21",
+                        "surface-variant": "#353534",
+                        "on-primary-container": "#762419",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "error-container": "#93000a",
+                        "on-secondary": "#412d00",
+                        "on-tertiary-fixed": "#121f00",
+                        "surface": "#131313",
+                        "primary-fixed-dim": "#ffb4a8",
+                        "secondary-container": "#604403",
+                        "inverse-primary": "#9e4134",
+                        "secondary-fixed": "#ffdea5",
+                        "primary-container": "#ff8c7a",
+                        "outline-variant": "#56423f",
+                        "surface-container-low": "#1c1b1b",
+                        "error": "#ffb4ab",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#25350c",
+                        "inverse-on-surface": "#313030",
+                        "surface-container": "#201f1f",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-container": "#9fb47e",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed": "#410100",
+                        "on-primary-fixed-variant": "#7e2a1f",
+                        "surface-container-highest": "#353534",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary-fixed": "#d5eab0",
+                        "surface-tint": "#ffb4a8",
+                        "outline": "#a48b87",
+                        "on-surface-variant": "#dcc0bc",
+                        "on-error": "#690005",
+                        "primary-fixed": "#ffdad4",
+                        "on-secondary-container": "#dab36a",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-container": "#35461b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Noto Serif"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Noto Serif"],
+                        "display-xl": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-sans selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b border-stone-800 bg-stone-950/80 backdrop-blur-3xl flex justify-between items-center px-8 md:px-16 py-6 font-serif tracking-tight ease-in-out duration-300">
+<div class="text-2xl font-serif font-light tracking-[0.2em] text-amber-200 uppercase">
+            KAISEKI CHILE
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-400 font-medium hover:text-amber-100 transition-colors duration-300" href="#">Home</a>
+<a class="text-stone-400 font-medium hover:text-amber-100 transition-colors duration-300" href="#">Menu</a>
+<a class="text-stone-400 font-medium hover:text-amber-100 transition-colors duration-300" href="#">Reservations</a>
+<a aria-current="page" class="text-amber-200 border-b border-amber-200 pb-1 hover:text-amber-100 transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="hidden md:block">
+<button class="bg-secondary text-on-secondary font-body-lg text-body-lg px-6 py-2 rounded-DEFAULT hover:bg-secondary-fixed transition-colors duration-300">
+                Reserve Table
+            </button>
+</div>
+<button class="md:hidden text-amber-200 p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-40 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1600px] mx-auto w-full">
+<!-- Header Section -->
+<header class="text-center mb-24 max-w-3xl mx-auto">
+<h1 class="font-display-xl text-display-xl text-on-background mb-6">Find Us</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                Situated in the refined district of Vitacura, our sanctuary awaits. A space meticulously designed for quiet indulgence and the profound appreciation of Japanese culinary artistry.
+            </p>
+</header>
+<!-- Bento Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-gutter">
+<!-- Map Container -->
+<div class="lg:col-span-8 rounded-xl overflow-hidden border border-outline-variant bg-surface-container relative min-h-[500px] lg:min-h-[700px] group">
+<img alt="Map of Vitacura, Santiago" class="w-full h-full object-cover absolute inset-0 mix-blend-luminosity opacity-40 group-hover:opacity-50 transition-opacity duration-700" data-alt="Dark, moody stylized map visualization of Santiago Chile highlighting the Vitacura neighborhood with subtle glowing amber accents" data-location="Santiago, Chile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFRpy8COeNr_zMuDviKxSZcw7T5se6pkaqJGivBYZFt41xTl65TBsYsatRe3DWOl-7dahAAI4zQsB4cHjbvMm9id0nIEmXekWOdgLmyj8bs3EMYFQgkTDo19_vo3P_lPJkxJ1Uv58c4T2trnVL7x9_LH2NSNfFJ6-0YA6alhyZceOdGcfPtfgVvoe9byHKlD1F_W1WnEQqVQS6tzOlD8ornnWhIe-2Y4ymXF8-TC729L-v_kfUmEKdnW4KPF7aEe5p4-9r3Imgw04"/>
+<!-- Gradient Overlay for depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<!-- Floating Pin Card -->
+<div class="absolute bottom-8 left-8 bg-surface-container-high/90 backdrop-blur-md border border-outline-variant p-6 rounded-lg max-w-sm">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background text-xl mb-1">Kaiseki Chile</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Av. Nueva Costanera 4000<br/>Vitacura, Santiago</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Details Stack -->
+<div class="lg:col-span-4 flex flex-col gap-6 md:gap-gutter">
+<!-- Hours Card -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-8 lg:p-10 flex-grow flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<h2 class="font-headline-md text-headline-md text-2xl text-on-background">Service Hours</h2>
+</div>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-4">
+<li class="flex justify-between items-end border-b border-surface-variant pb-3">
+<span>Tuesday - Saturday</span>
+<span class="text-on-background font-medium">19:00 - 23:30</span>
+</li>
+<li class="flex justify-between items-end border-b border-surface-variant pb-3">
+<span>Sunday Lunch</span>
+<span class="text-on-background font-medium">13:00 - 16:30</span>
+</li>
+<li class="flex justify-between items-end pt-2">
+<span>Monday</span>
+<span class="text-outline">Closed</span>
+</li>
+</ul>
+</div>
+<!-- Contact Card -->
+<div class="bg-surface-container border border-outline-variant rounded-xl p-8 lg:p-10 flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">forum</span>
+<h2 class="font-headline-md text-headline-md text-2xl text-on-background">Connect</h2>
+</div>
+<div class="flex flex-col gap-5 font-body-md text-body-md text-on-background">
+<a class="flex items-center gap-4 hover:text-secondary transition-colors group p-2 -ml-2 rounded-lg hover:bg-surface-container-high" href="tel:+56912345678">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">call</span>
+<span>+56 9 1234 5678</span>
+</a>
+<a class="flex items-center gap-4 hover:text-secondary transition-colors group p-2 -ml-2 rounded-lg hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">chat</span>
+<span>WhatsApp Concierge</span>
+</a>
+<a class="flex items-center gap-4 hover:text-secondary transition-colors group p-2 -ml-2 rounded-lg hover:bg-surface-container-high" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">alternate_email</span>
+<span>reservations@kaisekic.cl</span>
+</a>
+<a class="flex items-center gap-4 hover:text-secondary transition-colors group p-2 -ml-2 rounded-lg hover:bg-surface-container-high mt-4 border-t border-surface-variant pt-6" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors">photo_camera</span>
+<span>@kaisekichile</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-800 bg-stone-950 flex flex-col md:flex-row justify-between items-center px-16 py-12 gap-8 font-serif text-sm tracking-wide mt-auto ease-in-out duration-300">
+<div class="text-xl font-serif text-amber-200 uppercase">
+            KAISEKI CHILE
+        </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-stone-500 hover:text-amber-200 transition-all" href="#">Instagram</a>
+<a class="text-stone-500 hover:text-amber-200 transition-all" href="#">WhatsApp</a>
+<a class="text-stone-500 hover:text-amber-200 transition-all" href="#">Privacy</a>
+<a class="text-stone-500 hover:text-amber-200 transition-all" href="#">Terms</a>
+</div>
+<div class="text-stone-500 text-center md:text-right">
+            © 2024 Kaiseki Chile. Crafted with Modern Omotenashi. Vitacura, Santiago.
+        </div>
+</footer>
+</body></html>
