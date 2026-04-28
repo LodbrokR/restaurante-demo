@@ -17,7 +17,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     const sendRes = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
-      to: 'TU_CORREO_AQUI@gmail.com', // CAMBIAR POR EL CORREO REGISTRADO EN RESEND
+      to: 'lmedina.web@gmail.com', // CAMBIAR POR EL CORREO REGISTRADO EN RESEND
       subject: Nuevo formulario recibido,
       html: htmlContent,
     });
@@ -31,3 +31,4 @@ export const POST: APIRoute = async ({ request }) => {
     return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500 });
   }
 };
+
